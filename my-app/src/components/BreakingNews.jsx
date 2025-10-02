@@ -7,7 +7,7 @@ const BreakingNews = () => {
         Breaking News
       </span>
 
-      <p className='text-white font-medium '>Kanye West says he's running for president in 2020.</p>
+      <p className='text-white font-medium text-xl ml-3'>Kanye West says he's running for president in 2020.</p>
     </div>
   )
 }

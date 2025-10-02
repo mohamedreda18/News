@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'react-router'
 import ArticleCard from './ArticleCard'
 
+
+
 const NewsGrid = () => {
     return (
-        <div className='"max-w-6xl mx-auto px-4  '>
-            <header className='flex justify-between p-5 bg-[#FFFFFf] shadow-xl mb-[1rem]  mt-[2rem]'>
+        <div className='max-w-6xl mx-auto px-4  '>
+            <header className='flex justify-between p-5 bg-[#FFFFFf] shadow-xl mb-[0.9rem] '>
                 <nav className='space-x-5'> 
                     <Link className='font-medium text-2xl'>Latest Stories</Link>
                     <Link className='font-medium text-2xl'>Think</Link>
@@ -18,7 +20,7 @@ const NewsGrid = () => {
                     </svg>
                 </div>
             </header>
-            <div className=' grid grid-cols-2 gap-5'>
+            <div className=' grid md:grid-cols-2 gap-5'>
                 <ArticleCard/>
                 <ArticleCard/>
             </div>

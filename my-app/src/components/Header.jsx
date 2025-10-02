@@ -17,10 +17,10 @@ const Header = () => {
 
 
     return (
-        <nav className="bg-white shadow-md sticky top-0 z-50 flex  mx-auto px-4">
+        <nav className="bg-white shadow-md sticky top-0 z-50 flex  px-4">
             <div className="container mx-auto px-4 p-[14px]">
-                <div className="flex items-center justify-between h-16 ">
-                    <Logo />
+                <div className="flex items-center justify-between h-16  ">
+                    <Logo/>
 
                     <div className="right-section flex space-x-10">
                         {hideNave && (
