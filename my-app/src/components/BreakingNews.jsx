@@ -2,8 +2,8 @@ import React from 'react'
 
 const BreakingNews = () => {
   return (
-    <div className="w-full bg-red-600 flex justify-center h-[80px] items-center space-x-6 mt-5">
-      <span className="bg-white  flex items-center text-red-600 p-5 ">
+    <div className="w-full sm:hidden bg-red-600 md:flex justify-center h-[80px] items-center space-x-6 mt-5">
+      <span className="bg-white   items-center text-red-600 p-5 ">
         Breaking News
       </span>
 
