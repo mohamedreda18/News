@@ -14,7 +14,7 @@ const Trending = () => {
     }
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-5 p-[23px] gap-6 h-[600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 p-[23px] gap-6 ]">
             <div className="col-span-3 ">
                 <div>
                     <img src={trending} alt="" />
