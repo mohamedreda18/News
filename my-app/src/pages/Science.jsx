@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ArticleCard from '../components/ArticleCard'
 
-const Business = () => {
-    const [business, setBusiness] = useState([]);
+const Science = () => {
+    const [Science, setScience] = useState([]);
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
     const [visibleCount, setVisibleCount] = useState(4)
@@ -14,19 +14,19 @@ const Business = () => {
     }
 
     useEffect(() => {
-        const loadBusiness = async () => {
+        const loadScience = async () => {
             try {
-                const response = await axios.get('https://newsapi.org/v2/top-headlines?category=business&apiKey=f273e871107a4ed7a9b7e03417a27c14')
-                setBusiness(response.data.articles)
+                const response = await axios.get('https://newsapi.org/v2/top-headlines?category=Science&apiKey=f273e871107a4ed7a9b7e03417a27c14')
+                setScience(response.data.articles)
                 setError(null) 
             } catch (error) {
-                setError("Failed to load business news")
+                setError("Failed to load Science news")
                 console.log(error)
             } finally {
                 setLoading(false)
             }
         }
-        loadBusiness();
+        loadScience();
     }, [])
 
     return (
@@ -36,7 +36,7 @@ const Business = () => {
                     {loading ? (
                         <div>Loading...</div>
                     ) : (
-                        business.slice(0, visibleCount).map((item, index) => (
+                        Science.slice(0, visibleCount).map((item, index) => (
                             <ArticleCard
                                 key={index}
                                 image={item.urlToImage}
@@ -52,7 +52,7 @@ const Business = () => {
 
                 {error && <div className="error-message">{error}</div>}
 
-                {!loading && business.length > visibleCount && (
+                {!loading && Science.length > visibleCount && (
                     <div className='flex justify-center my-6'>
                         <button onClick={loadMore} className='py-3 px-6 bg-transparent border border-red-500 font-medium cursor-pointer text-red-500'>
                             View More
@@ -64,4 +64,4 @@ const Business = () => {
     )
 }
 
-export default Business
+export default Science
