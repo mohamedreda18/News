@@ -47,9 +47,9 @@ const NewsGrid = () => {
         <div className='max-w-6xl mx-auto px-4'>
             <header className='flex justify-between p-5 bg-[#FFFFFf] shadow-xl mb-[0.9rem]'>
                 <nav className='space-x-5'>
-                    <Link className='font-medium text-2xl'>Latest Stories</Link>
-                    <Link className='font-medium text-2xl'>Think</Link>
-                    <Link className='font-medium text-2xl'>Health</Link>
+                    <Link className='font-medium text-2xl hover:border-b-2 hover:border-b-red-500 transition-all  duration-200'>Latest Stories</Link>
+                    <Link className='font-medium text-2xl hover:border-b-2 hover:border-b-red-500 transition-all duration-200'>Think</Link>
+                    <Link className='font-medium text-2xl hover:border-b-2 hover:border-b-red-500 transition-all  duration-200'>Health</Link>
                 </nav>
                 <div>
                     <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@ const NewsGrid = () => {
                 </div>
             </header>
 
-        
+
 
             <div className='grid md:grid-cols-2 gap-5'>
                 {error && (
@@ -72,8 +72,8 @@ const NewsGrid = () => {
                             image={item.urlToImage}
                             author={item.author}
                             title={item.title}
-                            description={item.description} 
-                            url={item.url}/>
+                            description={item.description}
+                            url={item.url} />
                     ))
                 }
 
