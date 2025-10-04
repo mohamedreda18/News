@@ -1,23 +1,28 @@
 import React from 'react'
-import image1 from '../assets/image1.png'
 
-const ArticleCard = () => {
+import { formatDate , getRelativeTime } from '../utils/DateFormating'
+
+const ArticleCard = ({image ,author ,title ,description , url , publishedAt }) => {
+  
+   const handleCardClick = () => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
     return (
-            <div className='shadow-2xl cursor-pointer hover:scale-105 duration-200 transition-all'>
-                <img src={image1} alt="" />
-                <div className='p-5 space-y-2 '>
-                    <div className='text flex flex-col '>
-                        <h2 className='text-center font-bold text-[1.2rem]'>John Lewis to make final journey across Edmund Pettus Bridge in procession</h2>
-                        <p className='mt-4 mb-5'>The body of the late US Rep. John Lewis on Sunday will make the final journey across the famous bridge in Selma, Alabama, where he helped lead a march for voting rights in 1965.</p>
+            <div onClick={handleCardClick} className='shadow-2xl cursor-pointer hover:scale-102 duration-200 transition-all flex flex-col h-full'>
+                <img className='w-full h-48 object-cover' src={image} alt="" />
+                <div className='p-5 space-y-2 flex flex-col flex-grow'>
+                    <div className='text flex flex-col flex-grow '>
+                        <h2 className='text-center font-bold text-[1.2rem] mb-4 line-clamp-2'>{title}</h2>
+                        <p className='line-clamp-3 flex-grow mb-5'>{description}</p>
                     </div>
                     <div className='lower space-x-5'>
-                        <span>2 hours ago</span>
-                        <span className='font-light'>By Lucy Hiddleston  |  4min read</span>
+                        <span>{new Date(publishedAt).toLocaleDateString()}</span>
+                        <span className='font-light'>{author}</span>
                     </div>
                 </div>
-                <footer className='flex pt-2 px-5 space-x-4 justify-center border-t-[1px]'>
+                <footer className='flex py-3 px-5 space-x-4 justify-center border-t-[1px]  border-gray-200 mt-auto'>
                     <div className='flex items-center space-x-1'>
-                        <button className='cursor-pointer hover:bg-red-500 focus:bg-red-500'><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button className='cursor-pointer hover:bg-red-200 p-1 rounded transition-colors'><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 16C9 16 0 7.64952 0 4.68445C0 1.52744 1.64588 0 5.0625 0C6.75 0 9 2.5811 9 2.5811C9 2.5811 11.25 0 12.9375 0C16.3541 0 18 1.52644 18 4.68445C18 7.64952 9 16 9 16ZM12.9375 1.03264C12.0499 1.03264 9 3.61179 9 3.61179C9 3.61179 5.949 1.03264 5.0625 1.03264C2.07225 1.03264 1.125 2.15932 1.125 4.82149C1.125 7.32371 9 14.4504 9 14.4504C9 14.4504 16.875 7.32371 16.875 4.82149C16.875 2.15932 15.9277 1.03264 12.9375 1.03264Z" fill="#2A2A2A" />
                         </svg>
                         </button>
