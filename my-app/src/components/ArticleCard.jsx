@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { formatDate , getRelativeTime } from '../utils/DateFormating'
 
 const ArticleCard = ({image ,author ,title ,description , url , publishedAt }) => {
   
