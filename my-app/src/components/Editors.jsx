@@ -6,6 +6,7 @@ import image2 from '../assets/editorImage2.png'
 const Editors = () => {
     return (
         <div className='container mx-auto px-4 my-5'>
+
             <div className='flex space-x-2 items-center  mb-4'>
                 <h1 className=' text-2xl font-bold'>Editor’s Picks</h1>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,22 +14,41 @@ const Editors = () => {
                 </svg>
             </div>
 
-            <div className='flex space-x-5'>
-                <div className='flex'>
-                    <img className='w-full h-45 object-cover' src={image1} alt="" />
-                    <div className='flex flex-col items-center  justify-around pl-3'>
-                        <h2 className=' text-xl  font-bold '>Serological surveys are being conducted to test for coronavirus antibodies. How useful are they?</h2>
-                        <h3 className=' font-light'>The authorities are hoping to find that a substantial proportion of the population has already been infected with the virus – and so is immune.</h3>
+
+            <div className='flex flex-col lg:flex-row gap-6'>
+                <div className='flex flex-col md:flex-row gap-4 flex-1'>
+                    <img
+                        className='w-full md:w-2/3 h-48 object-cover '
+                        src={image1}
+                        alt="Serological surveys"
+                    />
+                    <div className='flex flex-col justify-center md:justify-around gap-3 md:pl-3'>
+                        <h2 className='text-lg md:text-xl font-bold leading-tight'>
+                            Serological surveys are being conducted to test for coronavirus antibodies. How useful are they?
+                        </h2>
+                        <h3 className='text-gray-600 font-light text-sm md:text-base leading-relaxed'>
+                            The authorities are hoping to find that a substantial proportion of the population has already been infected with the virus – and so is immune.
+                        </h3>
                     </div>
                 </div>
-                <div className='flex'>
-                    <img className='w-full h-45 object-cover' src={image2} alt="" />
-                    <div className='flex flex-col items-center  justify-around pl-3'>
-                        <h2 className=' text-xl  font-bold'>Making a mark in Asia: East Bengal’s 2003 Asean Cup win – a defining moment for Indian club football</h2>
-                        <h3 className=' font-light'>Beating some of the finest teams from South Asia, East Bengal became the first Indian club to win an officially recognised Asian football tournament.</h3>
+
+                <div className='flex flex-col md:flex-row gap-4 flex-1'>
+                    <img
+                        className='w-full md:w-2/3 h-48 object-cover '
+                        src={image2}
+                        alt="East Bengal's 2003 Asean Cup win"
+                    />
+                    <div className='flex flex-col justify-center md:justify-around gap-3 md:pl-3'>
+                        <h2 className='text-lg md:text-xl font-bold leading-tight'>
+                            Making a mark in Asia: East Bengal's 2003 Asean Cup win – a defining moment for Indian club football
+                        </h2>
+                        <h3 className='text-gray-600 font-light text-sm md:text-base leading-relaxed'>
+                            Beating some of the finest teams from South Asia, East Bengal became the first Indian club to win an officially recognised Asian football tournament.
+                        </h3>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
