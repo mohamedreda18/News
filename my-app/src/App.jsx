@@ -10,12 +10,13 @@ import Health from './pages/Health';
 import Science from './pages/Science';
 import Sports from './pages/Sports';
 import Technology from './pages/Technology';
+import ArticlesPage from './pages/ArticlesPage';
+import Footer from './components/Footer';
 
 export function App() {
 
   return (
     <div >
-
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -26,7 +27,9 @@ export function App() {
         <Route path='/Science' element={<Science />} />
         <Route path='/Sports' element={<Sports />} />
         <Route path='/Technology' element={<Technology />} />
+        <Route path='/articles/:title' element={<ArticlesPage />} />
       </Routes>
+      <Footer />
 
     </div>
   )

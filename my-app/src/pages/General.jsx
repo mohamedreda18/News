@@ -18,7 +18,7 @@ const General = () => {
             try {
                 const response = await axios.get('https://newsapi.org/v2/top-headlines?category=General&apiKey=f273e871107a4ed7a9b7e03417a27c14')
                 setGeneral(response.data.articles)
-                setError(null) 
+                setError(null)
             } catch (error) {
                 setError("Failed to load General news")
                 console.log(error)
@@ -30,8 +30,13 @@ const General = () => {
     }, [])
 
     return (
-        <div className='container mx-auto px-4 mt-5'>
+        <div className='container mx-auto px-4 mt-5 min-h-screen' >
             <div >
+                <div className='w-full flex justify-center my-5'>
+                    <h2 className=' text-2xl font-bold'>
+                        General Articles
+                    </h2>
+                </div>
                 <div className='grid  md:grid-cols-4 sm:grid-cols-1 gap-6'>
                     {loading ? (
                         <div>Loading...</div>
@@ -44,7 +49,7 @@ const General = () => {
                                 title={item.title}
                                 description={item.description}
                                 url={item.url}
-                                publishedAt={item.publishedAt} 
+                                publishedAt={item.publishedAt}
                             />
                         ))
                     )}

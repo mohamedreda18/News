@@ -71,13 +71,13 @@ const Header = () => {
                         <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 md:hidden">
                             <div className=" py-4 border-t border-gray-200 ">
                                 <div className=" flex flex-col space-y-4">
-                                    <Link to="/business" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200   " onClick={() => { setIsMenuOpen(false) }}>Business</Link>
-                                    <Link to="/entertainment" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Entertainment</Link>
-                                    <Link to="/general" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>General</Link>
-                                    <Link to="/health" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Health</Link>
-                                    <Link to="/science" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Science</Link>
-                                    <Link to="/sports" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Sports</Link>
-                                    <Link to="/technology" className="text-gray-800 hover:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Technology</Link>
+                                    <Link to="/business" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200   " onClick={() => { setIsMenuOpen(false) }}>Business</Link>
+                                    <Link to="/entertainment" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Entertainment</Link>
+                                    <Link to="/general" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>General</Link>
+                                    <Link to="/health" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Health</Link>
+                                    <Link to="/science" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Science</Link>
+                                    <Link to="/sports" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Sports</Link>
+                                    <Link to="/technology" className="text-gray-800 hover:text-red-600 focus:text-red-600 font-semibold transition duration-200 " onClick={() => { setIsMenuOpen(false) }}>Technology</Link>
                                 </div>
                             </div>
                         </div>

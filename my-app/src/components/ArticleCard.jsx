@@ -1,10 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
+
 
 
 const ArticleCard = ({image ,author ,title ,description , url , publishedAt }) => {
+    
+    const navigate= useNavigate()
+
+
   
    const handleCardClick = () => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    navigate(`/articles/${encodeURIComponent(title)}` , {state : {article : {image ,author ,title ,description , url , publishedAt }}})
   };
     return (
             <div onClick={handleCardClick} className='shadow-2xl cursor-pointer hover:scale-102 duration-200 transition-all flex flex-col h-full'>

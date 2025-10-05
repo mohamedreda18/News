@@ -7,12 +7,14 @@ import Editors from '../components/Editors'
 
 const Home = () => {
   return (
-    <div>
+    <div className=' min-h-screen'>
+
+
+
       <Trending/>
       <BreakingNews/>
         <MainContent/>
         <Editors/>
-        <Footer/>
     </div>
   )
 }

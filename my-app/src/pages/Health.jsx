@@ -30,8 +30,13 @@ const Health = () => {
     }, [])
 
     return (
-        <div className='container mx-auto px-4 mt-5'>
+        <div className='container mx-auto px-4 mt-5 min-h-screen'>
             <div >
+                <div className='w-full flex justify-center my-5'>
+                    <h2 className=' text-2xl font-bold'>
+                        Health Articles
+                    </h2>
+                </div>
                 <div className='grid  md:grid-cols-4 sm:grid-cols-1 gap-6'>
                     {loading ? (
                         <div>Loading...</div>
