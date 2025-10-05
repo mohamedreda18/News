@@ -12,6 +12,7 @@ import Sports from './pages/Sports';
 import Technology from './pages/Technology';
 import ArticlesPage from './pages/ArticlesPage';
 import Footer from './components/Footer';
+import SearchResults from './pages/SearchResults';
 
 export function App() {
 
@@ -28,6 +29,8 @@ export function App() {
         <Route path='/Sports' element={<Sports />} />
         <Route path='/Technology' element={<Technology />} />
         <Route path='/articles/:title' element={<ArticlesPage />} />
+        <Route path="/search" element={<SearchResults />} />
+
       </Routes>
       <Footer />
 
