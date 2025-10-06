@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='flex flex-col space-y-6 md:flex-row justify-around  py-10 items-center text-white  '>
                     <div>
                         <div>
-                            <svg width="66" height="40" viewBox="0 0 66 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <svg width="66" height="40" viewBox="0 0 66 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                 <rect width="66" height="40" fill="url(#pattern0_1_356)" />
                                 <defs>
                                     <pattern id="pattern0_1_356" patternContentUnits="objectBoundingBox" width="1" height="1">

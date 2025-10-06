@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import { API_KEY , BASE_URL } from "../utils/api";
+import ArticleCard from "../components/ArticleCard";
 
 
 const SearchResults = () => {
@@ -39,25 +40,7 @@ const SearchResults = () => {
       </h1>
       <div className="grid md:grid-cols-3 gap-6">
         {articles.map((article, index) => (
-          <div
-            key={index}
-            className="border rounded-lg p-4 shadow hover:shadow-lg transition"
-          >
-            <img
-              src={article.urlToImage}
-              alt=""
-              className="w-full h-40 object-cover rounded-md mb-3"
-            />
-            <h2 className="text-lg font-semibold">{article.title}</h2>
-            <p className="text-sm text-gray-600">{article.description}</p>
-            <a
-              href={article.url}
-              target="_blank"
-              className="text-red-600 font-semibold mt-2 inline-block"
-            >
-              Read more →
-            </a>
-          </div>
+         <ArticleCard key={index} {...article} image={article.urlToImage} />
         ))}
       </div>
     </div>
