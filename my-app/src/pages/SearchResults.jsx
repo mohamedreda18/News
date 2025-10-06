@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
-import { API_KEY , BASE_URL } from "../utils/api";
+import { API_KEY, BASE_URL } from "../utils/api";
 import ArticleCard from "../components/ArticleCard";
 
 
 const SearchResults = () => {
-    
-    const location = useLocation();
-    const query = new URLSearchParams(location.search).get("q");
-    
-    const [articles, setArticle] = useState([]);
-    const [loading, setLoading] = useState(true);
+
+  const location = useLocation();
+  const query = new URLSearchParams(location.search).get("q");
+
+  const [articles, setArticle] = useState([]);
+  const [loading, setLoading] = useState(true);
   console.log(query);
 
   useEffect(() => {
@@ -30,18 +30,20 @@ const SearchResults = () => {
     if (query) loadNews();
   }, [query]);
 
-    if (loading) return <div className="p-10 text-center">Loading...</div>
+  if (loading) return <div className="p-10 text-center">Loading...</div>
 
 
   return (
-    <div className="p-6 min-h-screen">
-      <h1 className="text-2xl font-semibold mb-4">
-        Results for: <span className="text-red-500">{query}</span>
-      </h1>
-      <div className="grid md:grid-cols-3 gap-6">
-        {articles.map((article, index) => (
-         <ArticleCard key={index} {...article} image={article.urlToImage} />
-        ))}
+    <div className="p-6 min-h-screen ">
+      <div>
+        <h1 className="text-2xl font-semibold mb-4">
+          Results for: <span className="text-red-500">{query}</span>
+        </h1>
+        <div className="grid md:grid-cols-3 gap-6">
+          {articles.map((article, index) => (
+            <ArticleCard key={index} {...article} image={article.urlToImage} />
+          ))}
+        </div>
       </div>
     </div>
   );

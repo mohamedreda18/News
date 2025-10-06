@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
 
 
-  function handleSearch(e) {
+   function handleSearch(e) {
     e.preventDefault();
     if (!query.trim()) return;
     navigate(`/search?q=${query}`);

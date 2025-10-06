@@ -2,7 +2,6 @@ import React from 'react'
 import image from '../assets/image2.png'
 import LocationCard from './LocationCard'
 
-
 const SideBar = () => {
     return (
         <div>
