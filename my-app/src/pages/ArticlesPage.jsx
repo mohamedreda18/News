@@ -1,9 +1,17 @@
 
-import React from 'react'
 import { useLocation } from 'react-router'
+import { useContext } from 'react'
+import { likeContext } from '../hooks/context'
 
 
 const ArticlesPage = () => {
+
+
+    const { toggleLike } = useContext(likeContext)
+
+
+
+
     const location = useLocation()
 
     const { article } = location.state
@@ -26,37 +34,44 @@ const ArticlesPage = () => {
                 </div>
                 <div className='flex flex-col  mt-5 gap-9'>
 
-                        <div className='flex space-x-5 '>
-                            <span>{formatDate}</span>
-                            <span className='font-light'>{article.author}</span>
-                            
-                        </div>
+                    <div className='flex space-x-5 '>
+                        <span>{formatDate}</span>
+                        <span className='font-light'>{article.author}</span>
 
-                        <div className=' my-6'>
-                            <p className=' text-2xl  font-bold'>  {article.description}</p>
-                        </div>
+                    </div>
 
-                    
+                    <div className=' my-6'>
+                        <p className=' text-2xl  font-bold'>  {article.description}</p>
+                    </div>
+
+
                 </div>
             </div>
             <div className='icons  absolute left-6 top-[60%] tracking-wide w-18 flex flex-col items-center'>
                 <div >
                     <span>See more like this?</span>
                     <div>
-                        <span><svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="12" width="10" height="10" rx="5" transform="rotate(-90 0 12)" fill="#15C36F" />
-                            <rect x="30" y="12" width="10" height="10" rx="5" transform="rotate(-90 30 12)" fill="#EB681E" />
-                            <path d="M20 14L20 -4.17233e-07" stroke="black" />
-                        </svg>
+                        <span>
+                            <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="12" width="10" height="10" rx="5" transform="rotate(-90 0 12)" fill="#15C36F" />
+                                <rect x="30" y="12" width="10" height="10" rx="5" transform="rotate(-90 30 12)" fill="#EB681E" />
+                                <path d="M20 14L20 -4.17233e-07" stroke="black" />
+                            </svg>
                         </span>
 
                     </div>
                 </div>
                 <div className='flex flex-col space-y-6 mt-7'>
-                    <span><svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 20C11.25 20 0 9.5619 0 5.85556C0 1.90929 2.05734 0 6.32812 0C8.4375 0 11.25 3.22638 11.25 3.22638C11.25 3.22638 14.0625 0 16.1719 0C20.4427 0 22.5 1.90804 22.5 5.85556C22.5 9.5619 11.25 20 11.25 20Z" fill="#C31815" />
-                    </svg>
-                    </span>
+                    <div className='flex justify-center items-center '>
+                        <button onClick={toggleLike}
+                            className={` cursor-pointer hover:bg-red-300  rounded `}
+                        >
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 16C9 16 0 7.64952 0 4.68445C0 1.52744 1.64588 0 5.0625 0C6.75 0 9 2.5811 9 2.5811C9 2.5811 11.25 0 12.9375 0C16.3541 0 18 1.52644 18 4.68445C18 7.64952 9 16 9 16ZM12.9375 1.03264C12.0499 1.03264 9 3.61179 9 3.61179C9 3.61179 5.949 1.03264 5.0625 1.03264C2.07225 1.03264 1.125 2.15932 1.125 4.82149C1.125 7.32371 9 14.4504 9 14.4504C9 14.4504 16.875 7.32371 16.875 4.82149C16.875 2.15932 15.9277 1.03264 12.9375 1.03264Z" fill="#2A2A2A" />
+                            </svg>
+
+                        </button>
+                    </div>
                     <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17.5C10.3837 17.5 10.7587 17.4763 11.13 17.44L16.25 20V15.5737C18.535 13.97 20 11.5113 20 8.75C20 3.9175 15.5238 0 10 0C4.4775 0 0 3.9175 0 8.75C0 13.5825 4.4775 17.5 10 17.5ZM10 1.24878C14.8325 1.24878 18.75 4.60753 18.75 8.74878C18.75 11.2888 17.2587 13.51 15 14.8625V14.9974V18.1224L11.25 16.2488C11.25 16.2488 11.4338 16.2488 10 16.2488C5.16875 16.2488 1.25 12.89 1.25 8.74878C1.25 4.60753 5.16875 1.24878 10 1.24878Z" fill="#2A2A2A" />
                     </svg>

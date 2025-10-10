@@ -14,28 +14,31 @@ import ArticlesPage from './pages/ArticlesPage';
 import Footer from './components/Footer';
 import SearchResults from './pages/SearchResults';
 import Login from './pages/LogingPage';
+import LikeProvider from './hooks/context';
+import LikedPage from './pages/LikedPage';
 
 export function App() {
 
   return (
     <div >
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Business' element={<Business />} />
-        <Route path='/Entertainment' element={<Entertainment />} />
-        <Route path='/General' element={<General />} />
-        <Route path='/Health' element={<Health />} />
-        <Route path='/Science' element={<Science />} />
-        <Route path='/Sports' element={<Sports />} />
-        <Route path='/Technology' element={<Technology />} />
-        <Route path='/articles/:title' element={<ArticlesPage />} />
-        <Route path="/search" element={<SearchResults />} />
-        <Route path="/login" element={<Login />} />
-
-      </Routes>
-      <Footer />
-
+      <LikeProvider>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Business' element={<Business />} />
+          <Route path='/Entertainment' element={<Entertainment />} />
+          <Route path='/General' element={<General />} />
+          <Route path='/Health' element={<Health />} />
+          <Route path='/Science' element={<Science />} />
+          <Route path='/Sports' element={<Sports />} />
+          <Route path='/Technology' element={<Technology />} />
+          <Route path='/articles/:title' element={<ArticlesPage />} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/liked" element={<LikedPage/>} />
+        </Routes>
+        <Footer />
+      </LikeProvider>
     </div>
   )
 }
